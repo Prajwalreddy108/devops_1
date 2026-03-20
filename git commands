@@ -1,0 +1,5 @@
+git branch "branch_name"
+git checkout -a
+git log
+git add
+git switch
