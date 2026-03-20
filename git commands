@@ -3,3 +3,5 @@ git checkout -a
 git log
 git add
 git switch
+git push
+git pull
