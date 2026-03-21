@@ -2,22 +2,34 @@ pipeline {
     agent any
 
     stages {
+
         stage('Checkout') {
             steps {
-                echo "Checking out code"
+                echo "Checking out code..."
+                checkout scm
             }
         }
 
         stage('Build') {
             steps {
-                echo "Build stage running..."
+                echo "Running Build Stage..."
+                sh 'echo Building the project'
             }
         }
 
-        stage('Run Python') {
+        stage('Test') {
             steps {
-                sh 'python3 demo.py'
+                echo "Running Test Stage..."
+                sh 'echo Executing tests'
             }
         }
+
+        stage('Deploy') {
+            steps {
+                echo "Running Deploy Stage..."
+                sh 'echo Deploying application'
+            }
+        }
+
     }
 }
