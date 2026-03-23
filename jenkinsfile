@@ -1,1 +1,6 @@
-print("Hello from Jenkins!")
+import platform
+
+print("Python running on Jenkins!")
+print("OS:", platform.system())
+print("Version:", platform.version())
+print("Machine:", platform.machine())
