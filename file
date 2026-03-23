@@ -1,0 +1,46 @@
+print("=== SOFTWARE DEVELOPMENT LIFE CYCLE (SDLC) ===\n")
+
+# 1. Requirement Analysis
+print("1. REQUIREMENT ANALYSIS")
+print(" - Gathering requirements")
+print(" - Understanding client needs")
+print(" - Identifying project goals\n")
+
+# 2. Planning
+print("2. PLANNING")
+print(" - Preparing project plan")
+print(" - Estimating cost, time, resources")
+print(" - Risk analysis\n")
+
+# 3. System Design
+print("3. SYSTEM DESIGN")
+print(" - Designing architecture")
+print(" - Database design")
+print(" - UI/UX design\n")
+
+# 4. Development
+print("4. DEVELOPMENT")
+print(" - Writing code")
+print(" - Implementing features")
+print(" - Integrating modules\n")
+
+# 5. Testing
+print("5. TESTING")
+print(" - Running test cases")
+print(" - Finding defects")
+print(" - Fixing bugs\n")
+
+# 6. Deployment
+print("6. DEPLOYMENT")
+print(" - Deploying to server")
+print(" - Releasing to users")
+print(" - Production rollout\n")
+
+# 7. Maintenance
+print("7. MAINTENANCE")
+print(" - Monitoring system")
+print(" - Fixing issues")
+print(" - Updating and enhancing software\n")
+
+print("=== SDLC PROCESS COMPLETED ===")
+``
