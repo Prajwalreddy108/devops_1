@@ -15,10 +15,16 @@ EOF
             }
         }
 
-        stage('Run External Python File') {
+        stage('Run Java File') {
             steps {
-                echo "=== Running External Python File ==="
-                sh 'python3 sdlc.py'
+                echo "=== Running Java File After Requirement Analysis ==="
+                sh '''
+# Compile Java file
+javac Hello.java
+
+# Run Java program
+java Hello
+'''
             }
         }
 
@@ -96,3 +102,4 @@ EOF
 
     }
 }
+``
