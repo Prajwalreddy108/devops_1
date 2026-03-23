@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 node {
 
     stage('Requirement Analysis') {
@@ -8,6 +9,18 @@ print("Gathering requirements from client...")
 print("Understanding the problem and needs...")
 EOF
         '''
+=======
+pipeline {
+    agent any
+
+    stages {
+        stage('Run Python Script') {
+            steps {
+                echo "Running Python Script..."
+                sh 'python3 demo.py'
+            }
+        }
+>>>>>>> 8a50f84 (Added)
     }
 
     stage('Planning') {
@@ -30,46 +43,28 @@ EOF
         '''
     }
 
-    stage('Development') {
-        echo "=== SDLC Phase 4: Development ==="
-        sh '''
-python3 - << 'EOF'
-print("Writing code... Implementing features...")
-print("Development in progress...")
-EOF
-        '''
-    }
-
-    stage('Testing') {
-        echo "=== SDLC Phase 5: Testing ==="
-        sh '''
+    stage('Destage('Testing') {
+    echo "=== SDLC Phase 5: Testing ==="
+    sh '''
 python3 - << 'EOF'
 print("Executing test cases...")
 print("Identifying and fixing bugs...")
 EOF
-        '''
-    }
-
-    stage('Deployment') {
-        echo "=== SDLC Phase 6: Deployment ==="
-        sh '''
+    '''
+}stage('Deployment') {
+    echo "=== SDLC Phase 6: Deployment ==="
+    sh '''
 python3 - << 'EOF'
 print("Deploying application to the server...")
 print("Version released to production...")
 EOF
-        '''
-    }
-
-    stage('Maintenance') {
-        echo "=== SDLC Phase 7: Maintenance ==="
-        sh '''
+    '''
+}stage('Maintenance') {
+    echo "=== SDLC Phase 7: Maintenance ==="
+    sh '''
 python3 - << 'EOF'
 print("Monitoring application...")
 print("Applying patches and updates...")
 EOF
-        '''
-    }
-
+    '''
 }
-    
-
