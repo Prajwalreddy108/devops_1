@@ -1,73 +1,55 @@
-node {
+pipeline {
+    agent any
 
-    stage('Requirement Analysis') {
-        echo "=== SDLC Phase 1: Requirement Analysis ==="
-        sh '''
+    stages {
+        stage('Run SDLC Python Code') {
+            steps {
+                echo "Running SDLC Program"
+
+                sh '''
 python3 - << 'EOF'
-print("Gathering requirements from client...")
-print("Understanding the problem and needs...")
-EOF
-        '''
-    }
+print("=== SOFTWARE DEVELOPMENT LIFE CYCLE (SDLC) ===\\n")
 
-    stage('Planning') {
-        echo "=== SDLC Phase 2: Planning ==="
-        sh '''
-python3 - << 'EOF'
-print("Planning resources, timeline, team allocation...")
-print("Creating project roadmap...")
-EOF
-        '''
-    }
+print("1. REQUIREMENT ANALYSIS")
+print(" - Gathering requirements")
+print(" - Understanding client needs")
+print(" - Identifying project goals\\n")
 
-    stage('Design') {
-        echo "=== SDLC Phase 3: System Design ==="
-        sh '''
-python3 - << 'EOF'
-print("Designing architecture, components, data flow...")
-print("Creating design documents...")
-EOF
-        '''
-    }
+print("2. PLANNING")
+print(" - Preparing project plan")
+print(" - Estimating cost, time, resources")
+print(" - Risk analysis\\n")
 
-    stage('Development') {
-        echo "=== SDLC Phase 4: Development ==="
-        sh '''
-python3 - << 'EOF'
-print("Writing code... Implementing features...")
-print("Development in progress...")
-EOF
-        '''
-    }
+print("3. SYSTEM DESIGN")
+print(" - Designing architecture")
+print(" - Database design")
+print(" - UI/UX design\\n")
 
-    stage('Testing') {
-        echo "=== SDLC Phase 5: Testing ==="
-        sh '''
-python3 - << 'EOF'
-print("Executing test cases...")
-print("Identifying and fixing bugs...")
-EOF
-        '''
-    }
+print("4. DEVELOPMENT")
+print(" - Writing code")
+print(" - Implementing features")
+print(" - Integrating modules\\n")
 
-    stage('Deployment') {
-        echo "=== SDLC Phase 6: Deployment ==="
-        sh '''
-python3 - << 'EOF'
-print("Deploying application to the server...")
-print("Version released to production...")
-EOF
-        '''
-    }
+print("5. TESTING")
+print(" - Running test cases")
+print(" - Finding defects")
+print(" - Fixing bugs\\n")
 
-    stage('Maintenance') {
-        echo "=== SDLC Phase 7: Maintenance ==="
-        sh '''
-python3 - << 'EOF'
-print("Monitoring application...")
-print("Applying patches and updates...")
-EOF
-        '''
-    }
+print("6. DEPLOYMENT")
+print(" - Deploying to server")
+print(" - Releasing to users")
+print(" - Production rollout\\n")
 
+print("7. MAINTENANCE")
+print(" - Monitoring system")
+print(" - Fixing issues")
+print(" - Updating and enhancing software\\n")
+
+print("=== SDLC PROCESS COMPLETED ===")
+EOF
+'''
+            }
+        }
+    }
 }
+``
