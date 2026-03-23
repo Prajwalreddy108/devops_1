@@ -1,7 +1,4 @@
-pipeline {
-    agent any
-
-    stages {
+node {
 
         stage('Requirement Analysis') {
             steps {
