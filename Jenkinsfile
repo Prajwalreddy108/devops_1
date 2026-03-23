@@ -5,7 +5,7 @@ pipeline {
 
         stage('Requirement Analysis') {
             steps {
-                echo "=== SDLC Phase 1: Requirement Analysis ==="
+                echo "=== SDLC Phase 1: Requirement Analysis ===" 
                 sh '''
 python3 - << 'EOF'
 print("Gathering requirements...")
