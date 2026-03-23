@@ -1,70 +1,98 @@
-<<<<<<< HEAD
-node {
-
-    stage('Requirement Analysis') {
-        echo "=== SDLC Phase 1: Requirement Analysis ==="
-        sh '''
-python3 - << 'EOF'
-print("Gathering requirements from client...")
-print("Understanding the problem and needs...")
-EOF
-        '''
-=======
 pipeline {
     agent any
 
     stages {
-        stage('Run Python Script') {
+
+        stage('Requirement Analysis') {
             steps {
-                echo "Running Python Script..."
-                sh 'python3 demo.py'
+                echo "=== SDLC Phase 1: Requirement Analysis ==="
+                sh '''
+python3 - << 'EOF'
+print("Gathering requirements...")
+print("Understanding the problem and user needs...")
+EOF
+'''
             }
         }
->>>>>>> 8a50f84 (Added)
-    }
 
-    stage('Planning') {
-        echo "=== SDLC Phase 2: Planning ==="
-        sh '''
-python3 - << 'EOF'
-print("Planning resources, timeline, team allocation...")
-print("Creating project roadmap...")
-EOF
-        '''
-    }
+        stage('Run External Python File') {
+            steps {
+                echo "=== Running External Python File ==="
+                sh 'python3 sdlc.py'
+            }
+        }
 
-    stage('Design') {
-        echo "=== SDLC Phase 3: System Design ==="
-        sh '''
+        stage('Planning') {
+            steps {
+                echo "=== SDLC Phase 2: Planning ==="
+                sh '''
 python3 - << 'EOF'
-print("Designing architecture, components, data flow...")
-print("Creating design documents...")
+print("Planning timeline...")
+print("Estimating cost and resources...")
 EOF
-        '''
-    }
+'''
+            }
+        }
 
-    stage('Destage('Testing') {
-    echo "=== SDLC Phase 5: Testing ==="
-    sh '''
+        stage('Design') {
+            steps {
+                echo "=== SDLC Phase 3: System Design ==="
+                sh '''
 python3 - << 'EOF'
-print("Executing test cases...")
-print("Identifying and fixing bugs...")
+print("Designing architecture...")
+print("Preparing UI/UX and database design...")
 EOF
-    '''
-}stage('Deployment') {
-    echo "=== SDLC Phase 6: Deployment ==="
-    sh '''
+'''
+            }
+        }
+
+        stage('Development') {
+            steps {
+                echo "=== SDLC Phase 4: Development ==="
+                sh '''
 python3 - << 'EOF'
-print("Deploying application to the server...")
-print("Version released to production...")
+print("Writing code...")
+print("Implementing features...")
 EOF
-    '''
-}stage('Maintenance') {
-    echo "=== SDLC Phase 7: Maintenance ==="
-    sh '''
+'''
+            }
+        }
+
+        stage('Testing') {
+            steps {
+                echo "=== SDLC Phase 5: Testing ==="
+                sh '''
 python3 - << 'EOF'
-print("Monitoring application...")
-print("Applying patches and updates...")
+print("Running test cases...")
+print("Fixing bugs...")
 EOF
-    '''
+'''
+            }
+        }
+
+        stage('Deployment') {
+            steps {
+                echo "=== SDLC Phase 6: Deployment ==="
+                sh '''
+python3 - << 'EOF'
+print("Deploying application...")
+print("Releasing to production...")
+EOF
+'''
+            }
+        }
+
+        stage('Maintenance') {
+            steps {
+                echo "=== SDLC Phase 7: Maintenance ==="
+                sh '''
+python3 - << 'EOF'
+print("Monitoring system...")
+print("Updating and improving software...")
+EOF
+'''
+            }
+        }
+
+    }
 }
