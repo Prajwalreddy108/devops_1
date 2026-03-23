@@ -1,102 +1,77 @@
+
 import time
 
-def line():
-    print("\n" + "-" * 70 + "\n")
+# Helper function for formatting
+def divider():
+    print("\n" + "-" * 50 + "\n")
 
+# SDLC Phases
 def requirement_analysis():
-    line()
-    print("📘 SDLC PHASE 1: REQUIREMENT ANALYSIS")
-    steps = [
-        "Gathering requirements from stakeholders...",
-        "Understanding user needs and system expectations...",
-        "Documenting functional and non-functional requirements...",
-        "Finalizing project scope..."
-    ]
-    for step in steps:
-        print(" -", step)
-        time.sleep(0.5)
+    divider()
+    print("📘 REQUIREMENT ANALYSIS")
+    print(" - Collecting requirements...")
+    time.sleep(0.3)
+    print(" - Understanding client needs...")
+    time.sleep(0.3)
+    print(" - Preparing requirement document...")
 
 def planning():
-    line()
-    print("📝 SDLC PHASE 2: PLANNING")
-    steps = [
-        "Estimating cost, time, and resources...",
-        "Creating project plan and timeline...",
-        "Risk identification and mitigation planning...",
-        "Team assignment and communication setup..."
-    ]
-    for step in steps:
-        print(" -", step)
-        time.sleep(0.5)
+    divider()
+    print("📝 PLANNING")
+    print(" - Estimating resources and budget...")
+    time.sleep(0.3)
+    print(" - Creating project plan and timelines...")
+    time.sleep(0.3)
+    print(" - Identifying risks...")
 
 def design():
-    line()
-    print("🎨 SDLC PHASE 3: SYSTEM DESIGN")
-    steps = [
-        "Designing system architecture...",
-        "Creating database schema and API contracts...",
-        "Designing UI/UX components...",
-        "Preparing design documentation..."
-    ]
-    for step in steps:
-        print(" -", step)
-        time.sleep(0.5)
+    divider()
+    print("🎨 SYSTEM DESIGN")
+    print(" - Designing architecture...")
+    time.sleep(0.3)
+    print(" - Database schema design...")
+    time.sleep(0.3)
+    print(" - Preparing UI/UX sketches...")
 
 def development():
-    line()
-    print("💻 SDLC PHASE 4: DEVELOPMENT")
-    steps = [
-        "Writing code and implementing features...",
-        "Integrating modules...",
-        "Performing code reviews...",
-        "Following coding standards..."
-    ]
-    for step in steps:
-        print(" -", step)
-        time.sleep(0.5)
+    divider()
+    print("💻 DEVELOPMENT")
+    print(" - Writing source code...")
+    time.sleep(0.3)
+    print(" - Implementing modules...")
+    time.sleep(0.3)
+    print(" - Code review and integration...")
 
 def testing():
-    line()
-    print("🧪 SDLC PHASE 5: TESTING")
-    steps = [
-        "Running unit tests and integration tests...",
-        "Reporting bugs and issues...",
-        "Validating test results...",
-        "Preparing test reports..."
-    ]
-    for step in steps:
-        print(" -", step)
-        time.sleep(0.5)
+    divider()
+    print("🧪 TESTING")
+    print(" - Running unit & integration tests...")
+    time.sleep(0.3)
+    print(" - Reporting bugs...")
+    time.sleep(0.3)
+    print(" - Validating functionality...")
 
 def deployment():
-    line()
-    print("☁️ SDLC PHASE 6: DEPLOYMENT")
-    steps = [
-        "Deploying application to production...",
-        "Configuring servers and services...",
-        "Post-deployment testing...",
-        "Releasing to end users..."
-    ]
-    for step in steps:
-        print(" -", step)
-        time.sleep(0.5)
+    divider()
+    print("🚀 DEPLOYMENT")
+    print(" - Deploying application to production...")
+    time.sleep(0.3)
+    print(" - Performing smoke testing...")
+    time.sleep(0.3)
+    print(" - Application live for end users...")
 
 def maintenance():
-    line()
-    print("🔧 SDLC PHASE 7: MAINTENANCE")
-    steps = [
-        "Monitoring system performance...",
-        "Fixing issues reported by users...",
-        "Releasing updates and patches...",
-        "Ensuring long-term system reliability..."
-    ]
-    for step in steps:
-        print(" -", step)
-        time.sleep(0.5)
+    divider()
+    print("🔧 MAINTENANCE")
+    print(" - Monitoring system performance...")
+    time.sleep(0.3)
+    print(" - Releasing updates & patches...")
+    time.sleep(0.3)
+    print(" - Fixing user‑reported issues...")
 
+# Main function
 def main():
-    print("\n======== SOFTWARE DEVELOPMENT LIFE CYCLE (SDLC) SIMULATION ========\n")
-    time.sleep(0.5)
+    print("\n==== SOFTWARE DEVELOPMENT LIFE CYCLE (SDLC) ====\n")
 
     requirement_analysis()
     planning()
@@ -106,9 +81,9 @@ def main():
     deployment()
     maintenance()
 
-    line()
+    divider()
     print("🎉 SDLC PROCESS COMPLETED SUCCESSFULLY!")
-    line()
+    divider()
 
 if __name__ == "__main__":
     main()
