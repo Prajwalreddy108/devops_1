@@ -15,14 +15,14 @@ EOF
             }
         }
 
-        stage('Run Java File') {
+        stage('Run Java Program') {
             steps {
-                echo "=== Running Java File After Requirement Analysis ==="
+                echo "=== Running Java Program ==="
                 sh '''
-# Compile Java file
+echo "Compiling Java program..."
 javac Hello.java
 
-# Run Java program
+echo "Running Java program..."
 java Hello
 '''
             }
@@ -99,7 +99,5 @@ EOF
 '''
             }
         }
-
     }
 }
-``
