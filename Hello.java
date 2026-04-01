@@ -1,7 +1,6 @@
 
 class Hello {
     public static void main(String[] args) {
-        System.out.println("Java program executed from Jenkins!");
+        System.out.println("Hello from Jenkins Pipeline");
     }
 }
-``
