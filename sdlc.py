@@ -1,2 +1,2 @@
-print("Hello from Python!")
-print("This is a simple Python program without input.")
+print("✅ Hello from Jenkins Python script!")
+print("Pipeline / Freestyle job is working correctly")
